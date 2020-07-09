@@ -17,8 +17,22 @@ export default class NavBarComponent extends React.Component {
     handleLogin = (event) => {
         event.preventDefault()
         const userData = {username: this.state.name, password: this.state.password}
-
+        const configObject = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(userData)
+        }
+        console.log(configObject)
         
+        fetch("http://localhost:3000/sessions", configObject)
+            .then(resp=>resp.json())
+            .then(json=>{
+                console.log(json)
+                this.setState({name: json.name, loggedIn: true, results: json.results})
+            })
     }
     
     handleChange = (event) => {
@@ -30,7 +44,7 @@ export default class NavBarComponent extends React.Component {
             <>
             <Nav className='mr-auto'></Nav>
             <Nav className='mr-auto'>
-                <Nav.Link>Username Here</Nav.Link>
+                <Nav.Link>{this.state.name}</Nav.Link>
             </Nav>
             <Nav className='mr-auto'>
                 <Button variance='outline-info'>Log Out</Button>

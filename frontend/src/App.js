@@ -7,8 +7,8 @@ import User from './components/User'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <header>
         <NavBarComponent />
       </header>
 

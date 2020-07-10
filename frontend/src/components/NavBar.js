@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
+import User from './User'
 
 export default class NavBarComponent extends React.Component {
     state = {
@@ -16,7 +17,7 @@ export default class NavBarComponent extends React.Component {
     
     handleLogin = (event) => {
         event.preventDefault()
-        const userData = {username: this.state.name, password: this.state.password}
+        const userData = {username: this.state.username, password: this.state.password}
         const configObject = {
             method: "POST",
             headers: {
@@ -25,13 +26,12 @@ export default class NavBarComponent extends React.Component {
             },
             body: JSON.stringify(userData)
         }
-        console.log(configObject)
         
         fetch("http://localhost:3000/sessions", configObject)
             .then(resp=>resp.json())
             .then(json=>{
-                console.log(json)
                 this.setState({name: json.name, loggedIn: true, results: json.results})
+                console.log(this.state)
             })
     }
     
@@ -49,6 +49,7 @@ export default class NavBarComponent extends React.Component {
             <Nav className='mr-auto'>
                 <Button variance='outline-info'>Log Out</Button>
             </Nav>
+            
             </>
         )
 
@@ -57,8 +58,8 @@ export default class NavBarComponent extends React.Component {
     userNotLoggedIn = () => {
         return (
             <Form inline>
-                <FormControl onChange={event => this.handleChange(event)} type='text' value={this.state.name} placeholder='UserName' name='name' className='mr-sm-2' />
-                <FormControl onChange={event => this.handleChange(event)} type='password' placeholder='Password' name='password' className='mr-sm-2' />
+                <FormControl onChange={event => this.handleChange(event)} type='text' value={this.state.username} placeholder='Username' name='username' className='mr-sm-2' />
+                <FormControl onChange={event => this.handleChange(event)} type='password' value={this.state.password} placeholder='Password' name='password' className='mr-sm-2' />
                 <Button onClick={event => this.handleLogin(event)} variant='outline-info'>Log In</Button>
             </Form>
         )
@@ -72,7 +73,7 @@ export default class NavBarComponent extends React.Component {
                 {this.state.loggedIn ? <this.userIsLoggedIn /> : <this.userNotLoggedIn />}
             </Navbar>
         
-        
+            < User userData={this.state} />
         
         
         </>

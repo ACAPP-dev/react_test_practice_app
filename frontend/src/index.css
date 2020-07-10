@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h2 {
+  text-align: center;
+}
+
+#formTestParameters {
+  width: 50%;
+  margin: 5px auto;
+}
+
+.card {
+  width: 75%;
+  margin: 2px auto;
+}

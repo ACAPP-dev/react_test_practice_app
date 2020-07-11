@@ -3,9 +3,11 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-export default class Test extends React.Component {
+export default class TestCard extends React.Component {
 
-    createTestCard(cardData, questionIndex) {
+    createTestCard = () => {
+        const cardData = this.props.cardData
+        const questionIndex = this.props.questionIndex
         const randomNum = Math.floor(Math.random() * 4)
         let questionObj = {}
 
@@ -59,7 +61,7 @@ export default class Test extends React.Component {
                         {questionObj.questions.map((question, index) => {
                             return(
                                 <ListGroup.Item>
-                                    <Button data-question={questionIndex} onClick={this.handleClick} variant='secondary'>{index + 1}</Button>{' '}
+                                    <Button data-question={questionIndex} data-answer={question} onClick={this.props.returnAnswerClick} variant='secondary'>{index + 1}</Button>{' '}
                                     {question}
                                 </ListGroup.Item>)
                         })}
@@ -69,20 +71,12 @@ export default class Test extends React.Component {
         )
     }
 
-    handleClick = (event) => {
-        console.log(`Button ${event.target.innerText} for question ${event.target.getAttribute('data-question')} clicked`)
-        console.log(event)
-        
-    }
+    
 
     render() {
-        console.log(this.props.testData)
         return (
             <>
-                <h2>{`Test Your Knowledge of: ${this.props.testData.category}`}</h2>
-                <div>
-                    {this.props.testData.testData.map((card, index) => this.createTestCard(card, index))}
-                </div>
+                {this.createTestCard()}
             </>
         )
     }

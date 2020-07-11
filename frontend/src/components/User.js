@@ -21,7 +21,6 @@ export default class User extends React.Component {
         event.preventDefault()
 
         const testURL = `https://opentdb.com/api.php?amount=${this.state.questions}&category=${this.state.category}&difficulty=${this.state.difficulty}&type=multiple`
-        console.log(testURL)
 
         fetch(testURL)
             .then(resp => resp.json())

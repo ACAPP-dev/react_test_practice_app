@@ -31,7 +31,6 @@ export default class NavBarComponent extends React.Component {
             .then(resp=>resp.json())
             .then(json=>{
                 this.setState({name: json.name, loggedIn: true, results: json.results})
-                console.log(this.state)
             })
     }
     
@@ -74,11 +73,7 @@ export default class NavBarComponent extends React.Component {
             </Navbar>
         
             < User userData={this.state} />
-        
-        
         </>
         )
     }
-
-
 }

@@ -12,14 +12,15 @@ export default class TestContainer extends React.Component {
         testResult: []
     }
 
-    handleTestData = (data) => {
-        this.setState({testQuestions: data})
+    handleTestData = (testQuestionArry, testSubject, testDifficulty, testLength) => {
         this.setState({
-            testSubject: data[0].category,
-            testDifficulty: data[0].difficulty,
-            testLength: data.length
+            testQuestions: testQuestionArry,
+            testSubject: testSubject,
+            testDifficulty: testDifficulty,
+            testLength: testLength
         })
-
+        console.log('TestContainer State after fetch and create questions array:')
+        console.log(this.state)
     }
 
     createCards = () => {
@@ -34,7 +35,8 @@ export default class TestContainer extends React.Component {
     handleAnswerClick = (event) => {
         const questionNumber = event.target.getAttribute('data-question')
         const submittedAnswer = event.target.getAttribute('data-answer')
-        const correctAnswer = this.state.testQuestions[event.target.getAttribute('data-question')].correct_answer
+        const correctAnswerNumber = this.state.testQuestions[questionNumber].correctAnswerIndex
+        const correctAnswer = this.state.testQuestions[questionNumber].answers[correctAnswerNumber]
         const newTestResultArry = this.state.testResult
 
         if (submittedAnswer === correctAnswer) {
@@ -46,7 +48,7 @@ export default class TestContainer extends React.Component {
             }
 
             this.setState({testResult: newTestResultArry})
-            event.currentTarget.parentElement.classname = 'correct'
+            event.currentTarget.parentElement.classList.add('correct')
         } else {
             console.log('Incorrect Answer!!')
             newTestResultArry[questionNumber] = {
@@ -55,14 +57,14 @@ export default class TestContainer extends React.Component {
             }
 
             this.setState({testResult: newTestResultArry})
-            
+            event.currentTarget.parentElement.classList.add('wrong')
         }
     }
 
     render() {
         return (
             <div>
-                < TestLoad returnTestData={this.handleTestData} />
+                < TestLoad returnTestQuestionArry={this.handleTestData} />
                 <h2>{`Test Your Knowledge of: need from state`}</h2>
                 <div>
                     {this.createCards()}

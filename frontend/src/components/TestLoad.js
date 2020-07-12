@@ -9,6 +9,13 @@ export default class TestLoad extends React.Component {
         difficulty: "medium",
     }
 
+    makeTestArry = (testQuestions) => {
+        return testQuestions.map((question) => {
+            return this.makeTestQuestionObject(question)
+
+        })
+     }
+
     handleFormChange(event) {
         this.setState({
             [event.target.name]: event.target.value
@@ -23,10 +30,67 @@ export default class TestLoad extends React.Component {
         fetch(testURL)
             .then(resp => resp.json())
             .then(json => {
-                console.log(json)
-                this.props.returnTestData(json.results)
+                console.log(`Results from fetch:`)
+                console.log(json.results)
+                // Need to make array of test questions and return array to TestContainer
+                return this.props.returnTestQuestionArry(
+                    this.makeTestArry(json.results),
+                    json.results[0].category,
+                    json.results[0].difficulty,
+                    json.results.length
+                )
+                // const testArry = this.makeTestArry(json.results)
+                // console.log('return value of makeTestArry in fetch:')
+                // console.log(testArry)
             })
     }
+
+    makeTestQuestionObject = (question) => {
+            const randomNum = Math.floor(Math.random() * 4)
+
+            switch(randomNum) {
+                case 0:
+                    return {question: question.question,
+                        correctAnswerIndex: 0, 
+                        answers: [
+                            question.correct_answer, 
+                            question.incorrect_answers[0], 
+                            question.incorrect_answers[1], 
+                            question.incorrect_answers[2]
+                        ]
+                    }
+                case 1:
+                    return {question: question.question,
+                        correctAnswerIndex: 1, 
+                        answers: [
+                            question.incorrect_answers[1],
+                            question.correct_answer, 
+                            question.incorrect_answers[0],  
+                            question.incorrect_answers[2]
+                        ]
+                    }
+                case 2:
+                    return {question: question.question,
+                        correctAnswerIndex: 2, 
+                        answers: [
+                            question.incorrect_answers[2],
+                            question.incorrect_answers[1],
+                            question.correct_answer, 
+                            question.incorrect_answers[0]
+                        ]
+                    }
+                case 3:
+                    return {question: question.question,
+                        correctAnswerIndex: 3, 
+                        answers: [
+                            question.incorrect_answers[0],
+                            question.incorrect_answers[2],
+                            question.incorrect_answers[1],
+                            question.correct_answer
+                        ]
+                    }
+            }
+        }
 
     render() {
 
@@ -65,8 +129,6 @@ export default class TestLoad extends React.Component {
                     </Form.Group>
                     <Button onClick={event => this.handleLoadTest(event)} variance='outline-info'>Load Test</Button>
                 </Form>
-
-               
             </>
         )
     }

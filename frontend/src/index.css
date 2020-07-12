@@ -26,6 +26,10 @@ h2 {
   margin: 2px auto;
 }
 
-.correct {
+div.correct {
   background-color: lightgreen;
+}
+
+div.wrong {
+  background-color: red;
 }

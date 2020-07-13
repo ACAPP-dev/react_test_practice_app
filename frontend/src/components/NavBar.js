@@ -31,6 +31,7 @@ export default class NavBarComponent extends React.Component {
             .then(resp=>resp.json())
             .then(json=>{
                 this.setState({name: json.name, loggedIn: true, results: json.results})
+                {this.props.returnUserData(this.state)}
             })
     }
     
@@ -48,7 +49,7 @@ export default class NavBarComponent extends React.Component {
             <Nav className='mr-auto'>
                 <Button variance='outline-info'>Log Out</Button>
             </Nav>
-            
+           
             </>
         )
 

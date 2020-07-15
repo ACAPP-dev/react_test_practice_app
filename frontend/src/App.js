@@ -5,6 +5,8 @@ import './App.css';
 
 import TestContainer from './containers/TestContainer'
 
+// convert to class based component and add state for user
+
 function App() {
 
   return ( 

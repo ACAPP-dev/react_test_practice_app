@@ -107,9 +107,7 @@ export default class TestContainer extends React.Component {
     render() {
         return (
             <div>
-                <header>
-                    <NavBarComponent returnUserData={this.handleUserData} />
-                </header>
+               
                 < TestLoad returnTestQuestionArry={this.handleTestData} />
                 <h2>{`Test Your Knowledge of: need from state`}</h2>
                 <div>

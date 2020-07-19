@@ -1214,3 +1214,467 @@ Processing by SessionsController#create as JSON
 Completed 200 OK in 221ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1781)
 
 
+Started POST "/sessions" for ::1 at 2020-07-19 12:53:35 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 255ms (Views: 30.2ms | ActiveRecord: 2.1ms | Allocations: 14797)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 12:56:46 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 223ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1799)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 12:59:22 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 220ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1802)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:07:14 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 219ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1828)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:08:33 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 223ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1799)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:10:50 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 225ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:15:51 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 220ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1782)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:16:09 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 204 No Content in 229ms (ActiveRecord: 0.1ms | Allocations: 599)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:16:31 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 220ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:16:51 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 221ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1782)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:17:11 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 220ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1784)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:20:52 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 220ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:21:15 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 219ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1782)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:22:23 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 221ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started GET "/routes" for ::1 at 2020-07-19 13:48:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2020-07-19 13:56:12 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 234ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 11090)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 13:57:40 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 225ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1782)
+
+
+Started GET "/results" for ::1 at 2020-07-19 13:58:00 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ResultsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/results" for ::1 at 2020-07-19 14:00:36 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ResultsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2020-07-19 14:06:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 232ms (Views: 8.3ms | ActiveRecord: 1.2ms | Allocations: 11641)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 14:09:22 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 277ms (Views: 53.2ms | ActiveRecord: 0.3ms | Allocations: 1785)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 14:10:54 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 222ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 14:13:12 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.1ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 224ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1781)
+
+
+Started GET "/results" for ::1 at 2020-07-19 14:13:48 -0700
+Processing by ResultsController#index as */*
+Started POST "/sessions" for ::1 at 2020-07-19 14:15:42 -0700
+Started POST "/sessions" for ::1 at 2020-07-19 14:15:42 -0700
+Completed 500 Internal Server Error in 114294ms (ActiveRecord: 0.0ms | Allocations: 228900)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `index'
+app/controllers/results_controller.rb:5:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (3.7ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mResult Load (0.9ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 540ms (Views: 276.3ms | ActiveRecord: 4.7ms | Allocations: 787965)
+
+
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 546ms (Views: 56.8ms | ActiveRecord: 2.1ms | Allocations: 823573)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 14:15:46 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (0.9ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 284ms (Views: 34.7ms | ActiveRecord: 1.8ms | Allocations: 483737)
+
+
+Started POST "/results" for ::1 at 2020-07-19 14:16:06 -0700
+Processing by ResultsController#create as JSON
+  Parameters: {"test_id"=>76, "test_subject"=>"General Knowledge", "test_score"=>0, "username"=>"acapp", "result"=>{"test_id"=>76, "test_subject"=>"General Knowledge", "test_score"=>0}}
+Completed 500 Internal Server Error in 20270ms (ActiveRecord: 0.0ms | Allocations: 29234)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/results_controller.rb:10:in `create'
+Started POST "/sessions" for ::1 at 2020-07-19 14:17:53 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (3.6ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 580ms (Views: 171.6ms | ActiveRecord: 28.6ms | Allocations: 3122523)
+
+
+Started POST "/results" for ::1 at 2020-07-19 14:18:11 -0700
+Processing by ResultsController#create as JSON
+  Parameters: {"test_id"=>63, "test_subject"=>"General Knowledge", "test_score"=>0.4, "username"=>"acapp", "result"=>{"test_id"=>63, "test_subject"=>"General Knowledge", "test_score"=>0.4}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/results_controller.rb:10:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mResult Create (8.0ms)[0m  [1m[32mINSERT INTO "results" ("user_id", "test_id", "test_subject", "test_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["test_id", 63], ["test_subject", "General Knowledge"], ["test_score", 0.4], ["created_at", "2020-07-19 21:18:42.909100"], ["updated_at", "2020-07-19 21:18:42.909100"]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  ↳ app/controllers/results_controller.rb:14:in `create'
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ (byebug):1:in `create'
+Completed 500 Internal Server Error in 77685ms (Views: 10.8ms | ActiveRecord: 10.4ms | Allocations: 389459)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/results_controller.rb:14:in `create'
+Started POST "/sessions" for ::1 at 2020-07-19 14:20:51 -0700
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (4.6ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 620ms (Views: 216.2ms | ActiveRecord: 24.2ms | Allocations: 3213103)
+
+
+Started POST "/results" for ::1 at 2020-07-19 14:21:18 -0700
+Processing by ResultsController#create as JSON
+  Parameters: {"test_id"=>66, "test_subject"=>"Entertainment: Books", "test_score"=>0, "username"=>"acapp", "result"=>{"test_id"=>66, "test_subject"=>"Entertainment: Books", "test_score"=>0}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/results_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[36mResult Create (4.6ms)[0m  [1m[32mINSERT INTO "results" ("user_id", "test_id", "test_subject", "test_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["test_id", 66], ["test_subject", "Entertainment: Books"], ["test_score", 0.0], ["created_at", "2020-07-19 21:21:18.713287"], ["updated_at", "2020-07-19 21:21:18.713287"]]
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[36mResult Load (1.2ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/results_controller.rb:16:in `create'
+Completed 200 OK in 221ms (Views: 72.3ms | ActiveRecord: 17.2ms | Allocations: 1956703)
+
+
+Started POST "/sessions" for ::1 at 2020-07-19 14:22:41 -0700
+Processing by SessionsController#create as JSON
+  Parameters: {"username"=>"acapp", "password"=>"[FILTERED]", "session"=>{"username"=>"acapp", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+  [1m[36mResult Load (1.0ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/sessions_controller.rb:8:in `create'
+Completed 200 OK in 302ms (Views: 60.8ms | ActiveRecord: 2.5ms | Allocations: 798468)
+
+
+Started POST "/results" for ::1 at 2020-07-19 14:22:57 -0700
+Processing by ResultsController#create as JSON
+  Parameters: {"test_id"=>2, "test_subject"=>"General Knowledge", "test_difficulty"=>"medium", "test_score"=>0, "username"=>"acapp", "result"=>{"test_id"=>2, "test_subject"=>"General Knowledge", "test_difficulty"=>"medium", "test_score"=>0}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "acapp"], ["LIMIT", 1]]
+  ↳ app/controllers/results_controller.rb:10:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[36mResult Create (5.0ms)[0m  [1m[32mINSERT INTO "results" ("user_id", "test_id", "test_subject", "test_difficulty", "test_score", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["test_id", 2], ["test_subject", "General Knowledge"], ["test_difficulty", "medium"], ["test_score", 0.0], ["created_at", "2020-07-19 21:22:57.998064"], ["updated_at", "2020-07-19 21:22:57.998064"]]
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/results_controller.rb:15:in `create'
+  [1m[36mResult Load (3.8ms)[0m  [1m[34mSELECT "results".* FROM "results" WHERE "results"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/results_controller.rb:16:in `create'
+Completed 200 OK in 232ms (Views: 75.8ms | ActiveRecord: 20.4ms | Allocations: 2024453)
+
+

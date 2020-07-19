@@ -34,6 +34,16 @@ export default class App extends React.Component {
     })
   }
 
+  handleLogout = () => {
+    this.setState({
+      username: "",
+      name: "",
+      loggedIn: false,
+      results: [],
+      redirect: null
+    })
+}
+
   render() {
    
     return ( 
@@ -41,15 +51,13 @@ export default class App extends React.Component {
         
         <Router>
           <div>
-            <NavBar loggedIn={this.state.loggedIn} name={this.state.name} />
+            <NavBar returnLogout={this.handleLogout} loggedIn={this.state.loggedIn} name={this.state.name} />
             
-            <Route path="/">
+            <Route exact path="/">
               {this.state.redirect ? <Redirect to={this.state.redirect} /> : <Home />}
             </Route>
-              
-
             <Route exact path="/login" render={routerProps => <Login {...routerProps} returnLogin={this.handleLogin} />} />
-            <Route exact path="/test" user={this.state} component={TestContainer} />
+            <Route exact path="/test"  render={routerProps => <TestContainer {...routerProps} user={this.state} />} />
             <Route exact path="/results" user={this.state} component={Result} />
           </div>
 

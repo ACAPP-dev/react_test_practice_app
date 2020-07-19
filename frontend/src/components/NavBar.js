@@ -12,14 +12,11 @@ export default class NavBarComponent extends React.Component {
             <>
             <Nav className='mr-auto'></Nav>
             <Nav className='mr-auto'>
-                <Nav.Link>{this.props.name}</Nav.Link>
+                <span id="user-name-span" >{this.props.name}</span>
             </Nav>
             <Nav className='mr-auto'>
-                <Button variance='outline-info'>
-                    <NavLink to="/logout" exact>Log Out</NavLink>
-                </Button>
+                <NavLink onClick={this.props.returnLogout} to="/" exact>Log Out</NavLink>
             </Nav>
-           
             </>
         )
 
@@ -28,10 +25,8 @@ export default class NavBarComponent extends React.Component {
     userNotLoggedIn = () => {
         return (
             <Nav className='mr-auto'>
-            {/* <Button variance='outline-info'> */}
                 <NavLink to="/login" exact>Log In</NavLink>
-            {/* </Button> */}
-        </Nav>
+            </Nav>
         )
     }
 
@@ -40,8 +35,10 @@ export default class NavBarComponent extends React.Component {
         <>
             <Navbar bg='dark' variant='dark' className='justify-content-between'>
                 <Navbar.Brand>Andrew's React Test App</Navbar.Brand>
-                <NavLink to="/" exact>Home</NavLink>
-                <NavLink to="/test" exact>Take Test</NavLink>
+                <Nav className='mr-auto'>
+                    <NavLink to="/" exact>Home</NavLink>
+                    <NavLink to="/test" exact>Take Test</NavLink>
+                </Nav>
                 {this.props.loggedIn ? <this.userIsLoggedIn /> : <this.userNotLoggedIn />}
             </Navbar>
         
